@@ -1,25 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud Computing with Vercel</title>
 
     <style>
-        /* Seluruh CSS berada di sini */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,Helvetica,sans-serif;
+        }
+
+        body{
+            background:#f4f7fb;
+            color:#333;
+            line-height:1.6;
+        }
+
+        header{
+            background:linear-gradient(135deg,#2563eb,#1e40af);
+            color:white;
+            text-align:center;
+            padding:90px 20px;
+        }
+
+        header h1{
+            font-size:42px;
+            margin-bottom:15px;
+        }
+
+        header p{
+            max-width:700px;
+            margin:auto;
+            opacity:.95;
+        }
+
+        nav{
+            background:white;
+            display:flex;
+            justify-content:center;
+            gap:35px;
+            padding:18px;
+            box-shadow:0 2px 10px rgba(0,0,0,.08);
+            position:sticky;
+            top:0;
+            z-index:100;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:#2563eb;
+            font-weight:bold;
+            transition:.3s;
+        }
+
+        nav a:hover{
+            color:#1e3a8a;
+        }
+
+        section{
+            max-width:1100px;
+            margin:auto;
+            padding:70px 20px;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:40px;
+            color:#1e3a8a;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,.08);
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card h3{
+            color:#2563eb;
+            margin-bottom:15px;
+        }
+
+        .workflow{
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,.08);
+            text-align:center;
+            font-size:20px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:30px;
+            background:#2563eb;
+            color:white;
+            padding:14px 28px;
+            text-decoration:none;
+            border-radius:8px;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#1e40af;
+        }
+
+        footer{
+            background:#1e293b;
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+        }
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size:30px;
+            }
+
+            nav{
+                flex-wrap:wrap;
+            }
+
+        }
+
     </style>
 
 </head>
 
 <body>
 
-    <!-- Seluruh HTML -->
+<header>
 
-    <script>
-        // Seluruh JavaScript berada di sini
-    </script>
+    <h1>Cloud Computing with Vercel</h1>
+
+    <p>
+        Simple Static Website as an implementation of Cloud Computing deployment
+        using Vercel Platform.
+    </p>
+
+    <a href="#about" class="btn">
+        Learn More
+    </a>
+
+</header>
+
+<nav>
+
+    <a href="#about">About</a>
+
+    <a href="#services">Services</a>
+
+    <a href="#workflow">Workflow</a>
+
+</nav>
+
+<section id="about">
+
+    <h2>About Cloud Computing</h2>
+
+    <p style="text-align:center;max-width:850px;margin:auto;">
+        Cloud Computing is a technology that enables users to access computing
+        resources such as servers, storage, databases, and applications through
+        the internet. This project demonstrates a simple deployment of a static
+        website using Vercel as a Platform as a Service solution.
+    </p>
+
+</section>
+
+<section id="services">
+
+    <h2>Why Choose Vercel</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Fast Deployment</h3>
+            <p>
+                Deploy websites directly from GitHub with an automatic build
+                process.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Automatic HTTPS</h3>
+            <p>
+                Every deployed website is protected with SSL certificates by
+                default.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Global CDN</h3>
+            <p>
+                Static content is distributed through a global network for faster
+                access.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Git Integration</h3>
+            <p>
+                Every commit pushed to GitHub can automatically trigger a new
+                deployment.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="workflow">
+
+    <h2>Deployment Workflow</h2>
+
+    <div class="workflow">
+
+        Local Development
+
+        <br><br>
+
+        ↓
+
+        <br><br>
+
+        GitHub Repository
+
+        <br><br>
+
+        ↓
+
+        <br><br>
+
+        Automatic Deployment
+
+        <br><br>
+
+        ↓
+
+        <br><br>
+
+        Vercel Hosting
+
+        <br><br>
+
+        ↓
+
+        <br><br>
+
+        Live Website
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>Cloud Computing Project</h3>
+
+    <p>
+        Deployment using Vercel Platform
+    </p>
+
+    <p>
+        Universitas Muhammadiyah Sukabumi
+    </p>
+
+    <p id="year"></p>
+
+</footer>
+
+<script>
+
+document.getElementById("year").innerHTML =
+"Academic Year 2025/2026 | © " + new Date().getFullYear();
+
+</script>
 
 </body>
-
 </html>
